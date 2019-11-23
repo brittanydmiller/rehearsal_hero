@@ -4,4 +4,11 @@ Rails.application.routes.draw do
   namespace :v1, defaults: { format: 'json' } do
     get 'home', to: 'home#index'
   end
+  resources :theatrical_productions
+  resources :scripts
+  resources :acts
+  resources :scenes
+  resources :rehearsal_blocks
+  resources :roles
+  resources :locations
 end

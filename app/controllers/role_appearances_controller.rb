@@ -1,0 +1,2 @@
+class RoleAppearancesController < ApplicationController
+end
