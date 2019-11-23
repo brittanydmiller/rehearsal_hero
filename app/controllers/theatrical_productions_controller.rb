@@ -11,7 +11,8 @@ class TheatricalProductionsController < ApplicationController
   end
 
   def create
-    # POST creations come in here
+    production = TheatricalProduction.create(name: theatrical_production_params['name'])
+    render json: production
   end
 
   def edit
@@ -30,8 +31,8 @@ class TheatricalProductionsController < ApplicationController
     # DELETE updates to destroy
   end
 
-  def production_params
-    params.permit()
+  def theatrical_production_params
+    params.permit(:name)
   end
 
 end
